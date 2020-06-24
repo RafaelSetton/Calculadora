@@ -134,6 +134,12 @@ class _HomeState extends State<Home> {
         string = string.replaceAll('π', math.pi.toString());
         string = string.replaceAll('e', math.e.toString());
         string = string.replaceAll('  ', ' ');
+        if (string.startsWith(' ')){
+            string = string.substring(1);
+        }
+        if (string.endsWith(' ')){
+            string = string.substring(0, string.length-1);
+        }
         List<String> listString = string.split(' ');
         validacao(listString);
 
